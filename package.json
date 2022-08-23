@@ -1,4 +1,14 @@
 {
+  "name": "twitter-magic",
+  "version": "0.0.1",
+  "description": "A Twitter Magic app doing facny things",
+  "main": "slackapp.js",
+  "scripts": {
+    "start": "node slackapp.js"
+  },
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "@slack/bolt": "^3.12.1",
     "dotenv": "^16.0.1"
