@@ -10,12 +10,13 @@ const app = new App({
 });
 
 const Kusty = {
-    token: process.env.KUSTOMER_API_TOKEN
+    token: process.env.KUSTOMER_API_TOKEN,
+    uri: process.env.KUSTOMER_POST_URI
   }
 
 /* Add functionality here */
 const sendToKustomer = (body, token) => {
-      return fetch('https://api.kustomerapp.com/v1/hooks/form/622fb8c637c9d9f46c7389d6/0c0bc9c9b450764228dc68364d70592979d4d67a78f16f163037cf32decf3f65', {
+      return fetch(Kusty.uri, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
           body: body && JSON.stringify(body)
