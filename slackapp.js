@@ -36,24 +36,6 @@ app.event('app_mention', ({ event, say }) => {
 
   });
 
-  app.event('message', ({ event, say }) => {
-
-    if(!event.hasOwnProperty('subtype')) {
-       try {
-        sendToKustomer(event, Kusty)
-        
-      } catch (error) {
-        console.log('something went wrong')
-        console.error(error);
-      }
-    
-    } else {
-      console.log('This message has a subtype we dont want to use it.' , event.subtype);
-    }
-    
-    });
-
-
 
 (async () => {
   // Start the app
